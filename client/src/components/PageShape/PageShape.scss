@@ -1,0 +1,21 @@
+.hero__shape {
+    position: absolute;
+      /* top: -100px; */
+      right: 0;
+      height: 100vh;
+
+      &-filled {
+        max-height: 891px;
+        height: 100%;
+        max-width: 100%;
+      }
+
+      &-outline {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        max-height: 861px;
+        height: 100%;
+        width: 100%;
+      }
+  }
