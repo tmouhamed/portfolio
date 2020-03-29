@@ -2,4 +2,30 @@
   position: relative;
   padding-top: 0;
   height: 100vh;
+
+  &__typist {  position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: auto;
+    padding-left: 8%;
+  }
+  &__caption {
+    position: fixed;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__title {
+    color: #2F2F2F;
+    font-size: 3.8rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    width: 0;
+  }
+  &__description {
+    max-width: 55%;
+    margin-top: 2rem;
+    line-height: 2;
+    font-size: 18px;
+  }
 }
