@@ -3,29 +3,41 @@
   padding-top: 0;
   height: 100vh;
 
-  &__typist {  position: relative;
+  &__caption {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     min-width: auto;
     padding-left: 8%;
   }
-  &__caption {
+
+  &__typist {
     position: fixed;
     margin-top: 0;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
+
+    &-title {
+      color: #2f2f2f;
+      font-size: 3.8rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      width: 0;
+      margin: 0;
+    }
   }
-  &__title {
-    color: #2F2F2F;
-    font-size: 3.8rem;
-    line-height: 1.2;
-    white-space: nowrap;
-    width: 0;
-  }
-  &__description {
-    max-width: 55%;
-    margin-top: 2rem;
-    line-height: 2;
-    font-size: 18px;
+
+  &__subSection {
+    position: fixed;
+    top: 58%;
+    transform: translateY(-50%);
+    max-width: 45%;
+
+    &-description {
+      line-height: 2;
+      font-size: 18px;
+      color: #6b6b6b;
+      
+    }
   }
 }
