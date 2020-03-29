@@ -6,10 +6,3 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-section {
-  position: relative;
-  padding-top: 0;
-  height: 100vh;
-}
-
