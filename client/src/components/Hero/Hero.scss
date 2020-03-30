@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     min-width: auto;
-    padding-left: 8%;
+    padding: 0 8%;
   }
 
   &__typist {
@@ -25,6 +25,10 @@
       width: 0;
       margin: 0;
     }
+
+    &-mark {
+      color: #81D6E3;
+    }
   }
 
   &__subSection {
@@ -37,7 +41,49 @@
       line-height: 2;
       font-size: 18px;
       color: #6b6b6b;
-      
+      margin-bottom: 2em;
+    }
+
+    &-button {
+      position: relative;
+      background: none;
+      color: #7d53de;
+      text-decoration: none;
+      border: 0.2em solid #7d53de;
+      padding: 0.5em 1em;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: #fff;
+        height: 0.3em;
+        right: 20%;
+        top: -0.21em;
+        transform: skewX(-45deg);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: #fff;
+        height: 0.3em;
+        left: 20%;
+        bottom: -0.25em;
+        transform: skewX(45deg);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      &:hover {
+        &::before {
+          right: 80%;
+        }
+        &::after {
+          left: 80%;
+        }
+      }
     }
   }
 }

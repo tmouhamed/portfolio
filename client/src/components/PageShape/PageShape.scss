@@ -3,24 +3,33 @@
   right: 0;
   height: 100vh;
 
-  &-filled {
+  &-filled{
     max-height: 891px;
     height: 100%;
     max-width: 100%;
+
+    & path {
+      animation: slideIn 3s forwards;
+    }
   }
 
-  &-outline {
+  &-outline{
     position: absolute;
     top: 0;
     right: 5%;
     max-height: 861px;
     height: 100%;
     width: 100%;
+
+    & path {
+      animation: slideIn 3s forwards;
+    }
   }
 }
-
-@keyframes monitorIn{
-
-  from { top: -100; left: -100; }
-  to   { top: 0; left: 0; }
+@keyframes slideIn {
+  0% {
+    transform: translateX(450px);
+  }
+  100% {
+  }
 }
