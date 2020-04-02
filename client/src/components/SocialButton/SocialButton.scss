@@ -2,73 +2,72 @@
   position: absolute;
   top: 80%;
   padding: 0 8%;
-}
 
-.cube {
-  width: 60px;
-  height: 60px;
-  background: #F8F1C7;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  cursor: pointer;
-}
-
-.plus-vertical, .plus-horizontal {
-  background-color: #fff;
-  border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-.plus-vertical {
-  height: 50%;
-  width: 5px;
-}
-
-.plus-horizontal {
-  width: 50%;
-  height: 5px;
-}
-
-.quadrant {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  &__item {
-    width: 50%;
-    height: 50%;
+  &__cube {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(259.07deg, #7D53DE 4.07%, #7D53DE 100%);
-    border-radius: 6px;
     position: relative;
-    color: #fff;
+
+    &-plus__horizontal,
+    &-plus__vertical {
+      background-color: #fff;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      height: 50%;
+      width: 5px;
+    }
+
+    &-plus__horizontal {
+      width: 50%;
+      height: 5px;
+    }
   }
-  &__item__content {
+
+  &__quadrant {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translate(-50%, -50%);
+
+    &-item {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(259.07deg, #7d53de 4.07%, #7d53de 100%);
+      border-radius: 6px;
+      position: relative;
+      color: #fff;
+    }
+    &-item__content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
+
 .arrow-down,
 .arrow-left,
 .arrow-right,
