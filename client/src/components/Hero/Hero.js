@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Hero.scss';
 import PageShape from '../PageShape/PageShape';
+import SocialButton from '../SocialButton/SocialButton';
 
 import Typist from 'react-typist';
 
@@ -21,6 +22,8 @@ class Hero extends Component {
                         <a className="hero__subSection-button" href="/"> More about me</a>
                     </div>
                 </div >
+
+                <SocialButton />
             </section >
         );
     }
