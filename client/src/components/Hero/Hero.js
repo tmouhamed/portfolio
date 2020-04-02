@@ -13,7 +13,7 @@ class Hero extends Component {
 
                 <div className="hero__caption">
                     <Typist cursor={{ show: false }} className="hero__typist">
-                        <h1 className="hero__typist-title">Hello <span className="hero__typist-mark">!</span><br /> My name is <span>Toqa</span></h1>
+                        <h1 className="hero__typist-title">Hello <span className="hero__ttypist-mark">!</span><br /> My name is <span>Toqa</span></h1>
                         <Typist.Backspace count={15} delay={1000} />
                         <h1 className="hero__typist-title">I am a Web Developer</h1>
                     </Typist>
