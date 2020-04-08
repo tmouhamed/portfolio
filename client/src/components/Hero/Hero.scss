@@ -3,19 +3,51 @@
   padding-top: 0;
   height: 100vh;
 
+  &__shape {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+  
+    &-filled{
+      max-height: 891px;
+      height: 100%;
+      max-width: 100%;
+  
+      & path {
+        animation: slideIn 3s forwards;
+      }
+    }
+  
+    &-outline{
+      position: absolute;
+      top: 0;
+      right: 5%;
+      max-height: 861px;
+      height: 100%;
+      width: 100%;
+  
+      & path {
+        animation: slideIn 3s forwards;
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(450px);
+    }
+    100% {
+    }
+  }
+
+  
   &__caption {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: auto;
+    position: absolute;
     padding: 0 8%;
+    top: 30%;
   }
 
   &__typist {
-    position: fixed;
-    margin-top: 0;
-    top: 40%;
-    transform: translateY(-50%);
 
     &-title {
       color: #2f2f2f;
@@ -32,9 +64,6 @@
   }
 
   &__subSection {
-    position: fixed;
-    top: 58%;
-    transform: translateY(-50%);
     max-width: 45%;
 
     &-description {

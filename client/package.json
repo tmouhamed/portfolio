@@ -10,6 +10,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-page-scroller": "^2.0.6-beta",
     "react-scripts": "3.4.1",
     "react-typist": "^2.0.5"
   },

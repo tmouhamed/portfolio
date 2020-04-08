@@ -18,7 +18,7 @@ class SocialButton extends Component {
         this.myTween.timeScale(1.6);
         this.myTween
             .to('.container__cube', 0.4, { rotation: 45, width: '120px', height: '120px', ease: Expo.easeOut }, 'first')
-            .to('.plus .plus-horizontal', 0.3, { width: '0', backgroundColor: '#f45c41', ease: Power1.easeIn }, 'first')
+            .to('.container__cube-plus .container__cube-plus__horizontal', 0.3, { width: '0', backgroundColor: '#fff', ease: Power1.easeIn }, 'first')
             .to('.container__cube', 0, { backgroundColor: 'transparent' })
             .to('.quadrant__item1', 0.15, { x: -5, y: -5 }, 'seperate')
             .to('.arrow-up', 0.2, { opacity: 1, y: 0 }, 'seperate+=0.2')
@@ -40,7 +40,7 @@ class SocialButton extends Component {
     render() {
         return <div className="container" ref={cube => this.myElement = cube} onMouseOver={this.mouseOver} onMouseLeave={this.mouseLeave}>
             <div className="container__cube">
-                <div>
+                <div className="container__cube-plus">
                     <div className="container__cube-plus__horizontal"></div>
                     <div className="container__cube-plus__vertical"></div>
                 </div>
@@ -74,8 +74,10 @@ class SocialButton extends Component {
                     </div>
                     <div className="container__quadrant-item quadrant__item4">
                         <div className="container__quadrant-item__content">
-                            <svg baseProfile="tiny" height="42px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="42px" xmlns="http://www.w3.org/2000/svg" className="arrow-down">
-                                <path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z" fill="#fff" />
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" className="arrow-down">
+                                <a href={"mailto:s.toqaa@gmail.com"} target="_blank" rel="noopener noreferrer" cursor="pointer">
+                                    <path d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.238 5-5 5zm-.141-6.333c.63 0 1.141-.512 1.141-1.142v-9.05c0-.63-.511-1.142-1.141-1.142h-13.718c-.63 0-1.141.512-1.141 1.142v9.05c0 .63.511 1.142 1.141 1.142h13.718zm-6.859-4.058l-6.228-4.321-.014 7.712h12.457v-7.712l-6.215 4.321zm5.913-6.609c-1.745 1.215-5.913 4.153-5.913 4.153l-5.947-4.153h11.86z" fill="#fff" />
+                                </a>
                             </svg>
                         </div>
                     </div>
