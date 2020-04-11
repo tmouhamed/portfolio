@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './Hero.scss';
+import { v4 as uuidv4 } from 'uuid';
 import SocialButton from '../SocialButton/SocialButton';
+import './Hero.scss';
 
 import Typist from 'react-typist';
 
 class Hero extends Component {
     render() {
-        console.log(this.props.info);
-        
+        const { props , info} = this.props;
         return (
             <section className="hero">
                 <div className="hero__shape">
@@ -21,15 +21,23 @@ class Hero extends Component {
                 </div>
 
                 <div className="hero__caption">
-                    <Typist cursor={{ show: false }} className="hero__typist">
-                        <h1 className="hero__typist-title">Hello <span className="hero__ttypist-mark">!</span><br /> My name is <span>Toqa</span></h1>
-                        <Typist.Backspace count={15} delay={1000} />
-                        <h1 className="hero__typist-title">I am a Web Developer</h1>
-                    </Typist>
-                    <div className="hero__subSection">
-                        <p className="hero__subSection-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a className="hero__subSection-button" href="/about"> More about me</a>
-                    </div>
+                    {props.match.url === '/' ?
+                        <Typist cursor={{ show: false }} className="hero__typist">
+                            <h1 className="hero__typist-title">Hello <span className="hero__ttypist-mark">!</span><br /> My name is <span>Toqa</span></h1>
+                            <Typist.Backspace count={15} delay={1000} />
+                            <h1 className="hero__typist-title">I am a Web Developer</h1>
+                        </Typist>
+                        : null
+                    }
+                    {props.info.map(info => {
+                        return (
+                            <div className="hero__subSection" key={uuidv4()}>
+                                <p className="hero__subSection-description">{info.description}</p>
+                                <a className="hero__subSection-button" href="/about"> {info.button}</a>
+                            </div>
+
+                        )
+                    })}
                 </div >
 
                 <SocialButton />

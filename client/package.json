@@ -13,7 +13,8 @@
     "react-page-scroller": "^2.0.6-beta",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "uuid": "^7.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

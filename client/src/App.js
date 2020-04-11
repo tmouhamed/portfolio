@@ -29,8 +29,8 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/about" render={(props) => <AboutPage aboutInfo={this.state.aboutPage}/>}/>
-            <Route exact path="/" render={(props) => <LandingPage info={this.state.landingPage}/>}/>
+            <Route path="/about" render={(props) => <AboutPage  {...props} aboutInfo={this.state.aboutPage}/>}/>
+            <Route exact path="/" render={(props) => <LandingPage {...props} info={this.state.landingPage}/>}/>
           </Switch>
         </BrowserRouter>
       </div>
