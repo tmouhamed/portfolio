@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Work/Work.scss';
+import '../About/About.scss'
 
 import Person from '../../assets/Toqa_Mouhamed.jpg'
 
@@ -24,6 +25,17 @@ class About extends Component {
                         </div>
                     </div >
                 </section>
+                <section className="section">
+                        <div className="row">
+                            <div className="l-2up">
+                                <div className="l-2up__col">
+                                    <div className="m-image">
+                                        <img src={Person} alt="Ben Darby" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
             </>
 
         );

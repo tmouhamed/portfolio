@@ -26,7 +26,7 @@ class Hero extends Component {
                     </Typist>
                     <div className="hero__subSection">
                         <p className="hero__subSection-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        <a className="hero__subSection-button" href="/"> More about me</a>
+                        <a className="hero__subSection-button" href="/about"> More about me</a>
                     </div>
                 </div >
 
