@@ -6,6 +6,8 @@ import Typist from 'react-typist';
 
 class Hero extends Component {
     render() {
+        console.log(this.props.info);
+        
         return (
             <section className="hero">
                 <div className="hero__shape">

@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.scss';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
+import LandingPage from './pages/LandingPage/LandingPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 class App extends Component {
   state = {
-    currentPage: null
+    currentPage: null,
+    landingPage: [{
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      button: "more about me"
+    }],
+    aboutPage: [{
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      button: "my Work"
+    }]
   };
 
   handlePageChange = number => {
@@ -21,8 +29,8 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/about" component={About} />
-            <Route exact path="/" component={Hero} />
+            <Route path="/about" render={(props) => <AboutPage aboutInfo={this.state.aboutPage}/>}/>
+            <Route exact path="/" render={(props) => <LandingPage info={this.state.landingPage}/>}/>
           </Switch>
         </BrowserRouter>
       </div>
