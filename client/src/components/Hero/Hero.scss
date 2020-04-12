@@ -3,44 +3,62 @@
   padding-top: 0;
   height: 100vh;
 
+  &-about {
+    padding-top: 115px;
+  }
+
   &__shape {
     position: absolute;
     right: 0;
     height: 100vh;
-  
-    &-filled{
+    height: 1080px;
+
+    &-filled {
       max-height: 891px;
       height: 100%;
       max-width: 100%;
-  
+
       & path {
         animation: slideIn 3s forwards;
       }
     }
-  
-    &-outline{
+
+    &-outline {
       position: absolute;
       top: 0;
       right: 5%;
       max-height: 861px;
       height: 100%;
       width: 100%;
-  
+
       & path {
         animation: slideIn 3s forwards;
       }
     }
+
+    &-blueFilled {
+      max-height: 1080px;
+      height: 100%;
+      max-width: 100%;
+
+      & path {
+        animation: slideBlue 3s forwards;
+      }
+    }
+
+    &-blueOutline {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      max-height: 1164px;
+      width: 100%;
+      opacity: 0;
+
+      animation: outlineBlue 0.5s forwards;
+      animation-delay: 2.5s;
+    }
   }
 
-  @keyframes slideIn {
-    0% {
-      transform: translateX(450px);
-    }
-    100% {
-    }
-  }
-
-  
   &__caption {
     position: absolute;
     padding: 0 8%;
@@ -48,7 +66,6 @@
   }
 
   &__typist {
-
     &-title {
       color: #2f2f2f;
       font-size: 3.8rem;
@@ -59,7 +76,7 @@
     }
 
     &-mark {
-      color: #81D6E3;
+      color: #81d6e3;
     }
   }
 
@@ -67,7 +84,7 @@
     max-width: 45%;
 
     &-description {
-      line-height: 2;
+      line-height: 32px;
       font-size: 18px;
       color: #6b6b6b;
       margin-bottom: 2em;
@@ -114,5 +131,39 @@
         }
       }
     }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(450px);
+  }
+  100% {
+  }
+}
+
+@keyframes outlineBlue {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    transform-origin: right;
+    opacity: 1;
+  }
+}
+
+@keyframes slideBlue {
+  0% {
+    d: path(
+      "M300 41.9999C380 29.9999 402.045 69 402.045 69V311C402.045 311 423.247 389.812 255 329C172 299 68.0001 369 21.0001 273C-26.7812 175.404 16.9184 77.4431 70.9999 33C172 -50 220 53.9999 300 41.9999Z"
+    );
+    transform: translateX(600px);
+  }
+  100% {
+    d: path(
+      "M399.544 38.4444C531.544 -48.0556 977.044 38.4444 977.044 38.4444V938.445C977.044 938.445 600.547 1132.86 366.544 1065.44C198.725 1017.1 36.8275 976.29 3.04443 804.945C-41.7432 577.785 421.472 680.14 483.044 456.944C527.364 296.29 267.544 124.944 399.544 38.4444Z"
+    );
   }
 }

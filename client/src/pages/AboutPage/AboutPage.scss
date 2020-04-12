@@ -1,0 +1,65 @@
+.main {
+    position: relative;
+    margin: 0;
+
+    &__content {
+        position: relative;
+        padding: 0 8%;
+        max-width: 1440px;
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 47.5%);
+            grid-gap: 5%;
+            grid-row-gap: inherit;
+            position: relative;
+
+            &__left {
+                clear: left;
+                float: left;
+                display: block;
+
+                &-image {
+                    position: relative;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 50px rgba(38, 45, 56, 0.15);
+                    transform: scale(0.8);
+
+                    & img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                }
+                &-overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0.3;
+                    transition: 0.5s ease;
+                    background-color: #008cba;
+                }
+            }
+
+            &__right {
+                transform: translateY(450px);
+
+                &-description {
+                    transition: all, ease-in, 0.75s;
+                    transition-delay: 0.25s;
+
+                    & p {
+                        font-size: 18px;
+                        line-height: 36px;
+                        color: #6b6b6b;
+                    }
+                }
+            }
+        }
+    }
+}

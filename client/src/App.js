@@ -29,7 +29,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/about" render={(props) => <AboutPage  {...props} aboutInfo={this.state.aboutPage}/>}/>
+            <Route path="/about" render={(props) => <AboutPage  {...props} info={this.state.aboutPage}/>}/>
             <Route exact path="/" render={(props) => <LandingPage {...props} info={this.state.landingPage}/>}/>
           </Switch>
         </BrowserRouter>
