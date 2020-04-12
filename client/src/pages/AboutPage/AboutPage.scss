@@ -1,6 +1,7 @@
 .main {
     position: relative;
     margin: 0;
+    margin-bottom: 250px;
 
     &__content {
         position: relative;
@@ -10,7 +11,6 @@
         &-block {
             display: grid;
             grid-template-columns: repeat(auto-fit, 47.5%);
-            grid-gap: 5%;
             grid-row-gap: inherit;
             position: relative;
 
@@ -18,13 +18,13 @@
                 clear: left;
                 float: left;
                 display: block;
+                margin-right: 20px;
 
                 &-image {
                     position: relative;
                     border-radius: 30px;
                     overflow: hidden;
                     box-shadow: 0 10px 50px rgba(38, 45, 56, 0.15);
-                    transform: scale(0.8);
 
                     & img {
                         width: 100%;
@@ -58,6 +58,53 @@
                         line-height: 36px;
                         color: #6b6b6b;
                     }
+                }
+            }
+        }
+    }
+}
+
+.side {
+    position: relative;
+    margin: 200px 0;
+
+    &__content {
+        position: relative;
+        padding: 0 8%;
+
+        &-title {
+            font-size: 60px;
+            line-height: 72px;
+            margin-bottom: 60px;
+            color: #2f2f2f;
+            font-family: "Playfair Display", serif;
+        }
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 25%);
+
+            & div {
+                position: relative;
+                margin-bottom: 2em;
+                max-width: 120px;
+                margin-left: auto;
+                margin-right: auto;
+                transform: scale(0.7);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 40px;
+                    left: 50px;
+                    width: 120px;
+                    height: 110px;
+                    background-color: #daf8ff;
+                    z-index: -1;
+                }
+                & img {
+                    max-width: 190px;
+                    display: block;
+                    height: auto;
                 }
             }
         }
