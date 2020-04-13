@@ -50,9 +50,6 @@
                 transform: translateY(450px);
 
                 &-description {
-                    transition: all, ease-in, 0.75s;
-                    transition-delay: 0.25s;
-
                     & p {
                         font-size: 18px;
                         line-height: 36px;
@@ -81,32 +78,60 @@
         }
         &-block {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 25%);
+            grid-template-columns: repeat(auto-fit, 33%);
 
-            & div {
+            &__icon {
                 position: relative;
                 margin-bottom: 2em;
                 max-width: 120px;
                 margin-left: auto;
                 margin-right: auto;
-                transform: scale(0.7);
+                transform: scale(1);
 
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 40px;
-                    left: 50px;
+                    top: 15px;
+                    left: 20px;
                     width: 120px;
                     height: 110px;
                     background-color: #daf8ff;
                     z-index: -1;
                 }
                 & img {
-                    max-width: 190px;
+                    max-width: 120px;
                     display: block;
                     height: auto;
                 }
             }
+
+            &__title , &__text{
+                font-size: 18px;
+                line-height: 27px;
+                text-align: center;
+            }
+            &__text {
+                color: #6b6b6b;
+            }
+
+            &__code {
+                text-align: center;
+
+                &-title {
+                    color: #daf8ff;
+                }
+                &-list{
+                    text-align: center;
+                    padding: 0;
+                    list-style: none;
+                }
+                &-listItem {
+                    font-size: 18px;
+                    line-height: 36px;
+                    color: #6b6b6b;
+                }
+            }
+            
         }
     }
 }

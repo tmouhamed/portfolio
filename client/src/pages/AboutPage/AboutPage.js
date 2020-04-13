@@ -8,8 +8,8 @@ import myPicture from '../../assets/Toqa_Mouhamed.jpg';
 class AboutPage extends Component {
 
   render() {
-
     return (
+      
       <>
         <Hero props={this.props} fill="#DAF8FF" heroClass="hero hero-about" outlineViewbox="0 0 977 1164" filledViewbox="0 0 977 1080" outlineClass="hero__shape-blueOutline" shapeClass="hero__shape-blueFilled" path="M399.544 38.4444C531.544 -48.0556 977.044 38.4444 977.044 38.4444V938.445C977.044 938.445 600.547 1132.86 366.544 1065.44C198.725 1017.1 36.8275 976.29 3.04443 804.945C-41.7432 577.785 421.472 680.14 483.044 456.944C527.364 296.29 267.544 124.944 399.544 38.4444Z" />
         <section className="main">
@@ -36,33 +36,64 @@ class AboutPage extends Component {
             <h2 className="side__content-title">Skills</h2>
             <div className="side__content-block">
               <div>
-                <div>
+                <div className="side__content-block__icon">
                   <img src={frontEnd} alt="icon" />
                 </div>
-                <p>Front End Development</p>
+                <h4 className="side__content-block__title">Front End Development</h4>
+                <p className="side__content-block__text">I like to build things from scratch,  I love making pages come to life.</p>
+                <div className="side__content-block__code">
+                  <h4 className="side__content-block__code-title">Languages I do Love</h4>
+                  <ul className="side__content-block__code-list">
+                    <li className="side__content-block__code-listItem">HTML/CSS</li>
+                    <li className="side__content-block__code-listItem">Sass/Less</li>
+                    <li className="side__content-block__code-listItem">Bootstrap</li>
+                    <li className="side__content-block__code-listItem">JavaScript</li>
+                    <li className="side__content-block__code-listItem">React / Angular</li>
+                    <li className="side__content-block__code-listItem">Next.js</li>
+                    <li className="side__content-block__code-listItem">GraphQl</li>
+                  </ul>
+                </div>
               </div>
               <div>
-                <div>
+                <div className="side__content-block__icon">
                   <img src={backEnd} alt="icon" />
                 </div>
-                <p>Front End Development</p>
+                <h4 className="side__content-block__title">Back End Development</h4>
+                <p className="side__content-block__text">I like to build things from scratch,  I love making pages come to life.</p>
+                <div className="side__content-block__code">
+                  <h4 className="side__content-block__code-title">Languages I do Like</h4>
+                  <ul className="side__content-block__code-list">
+                    <li className="side__content-block__code-listItem">Node.js</li>
+                    <li className="side__content-block__code-listItem">Python</li>
+                    <li className="side__content-block__code-listItem">PHP</li>
+                    <li className="side__content-block__code-listItem">Web API</li>
+                    <li className="side__content-block__code-listItem">MongoDB</li>
+                    <li className="side__content-block__code-listItem">PostgreSQL</li>
+                    <li className="side__content-block__code-listItem">MySQL</li>
+                  </ul>
+                </div>
               </div>
               <div>
-                <div>
+                <div className="side__content-block__icon">
                   <img src={frontEnd} alt="icon" />
                 </div>
-                <p>Front End Development</p>
-              </div>
-              <div>
-                <div>
-                  <img src={frontEnd} alt="icon" />
+                <h4 className="side__content-block__title">Development</h4>
+                <p className="side__content-block__text">I like to build things from scratch,  I love making pages come to life.</p>
+                <div className="side__content-block__code">
+                  <h4 className="side__content-block__code-title">Things I do Enjoy:</h4>
+                  <ul className="side__content-block__code-list">
+                    <li className="side__content-block__code-listItem">C / C++</li>
+                    <li className="side__content-block__code-listItem">Docker / Kubernetes</li>
+                    <li className="side__content-block__code-listItem">AWS / Heroku</li>
+                    <li className="side__content-block__code-listItem">CMS / Wordpress/Drupal</li>
+                    <li className="side__content-block__code-listItem">Agile</li>
+                    <li className="side__content-block__code-listItem">Git</li>
+                  </ul>
                 </div>
-                <p>Front End Development</p>
               </div>
-              
             </div>
-          </div>
-        </section>
+          </div >
+        </section >
       </>
     );
   }

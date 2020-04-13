@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import './App.scss';
 
 import LandingPage from './pages/LandingPage/LandingPage';
@@ -12,15 +11,18 @@ class App extends Component {
     currentPage: null,
     landingPage: [{
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      button: "more about me"
+      button: "more about me",
+      link: "/about"
     }],
     aboutPage: [{
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      button: "my Work"
+      button: "my Work",
+      link: "/work"
     }],
     workPage: [{
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      button: "my Work"
+      button: "my Work",
+      link: "/"
     }]
   };
   render() {
