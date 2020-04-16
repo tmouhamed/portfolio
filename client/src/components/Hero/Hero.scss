@@ -1,17 +1,17 @@
 .hero {
   position: relative;
-  padding-top: 0;
-  height: 100vh;
+  padding-top: 250px;
 
-  &-about {
-    padding-top: 115px;
+  &-landingPage {
+    padding-top: 0;
+    height: 100vh;
   }
 
   &__shape {
     position: absolute;
     right: 0;
+    top: 0;
     height: 100vh;
-    height: 1080px;
 
     &-filled {
       max-height: 891px;
@@ -58,11 +58,21 @@
       animation-delay: 2.5s;
     }
   }
-
+  
   &__caption {
-    position: absolute;
+    margin-top: 0;
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+
+  &__row {
     padding: 0 8%;
-    top: 30%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: auto;
+    max-width: 1440px;
   }
 
   &__typist {
