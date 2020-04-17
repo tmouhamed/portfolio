@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
-import './App.scss';
+import './style/base.scss';
 
 import LandingPage from './pages/LandingPage/LandingPage';
 import AboutPage from './pages/AboutPage/AboutPage';
@@ -10,19 +10,23 @@ class App extends Component {
   state = {
     currentPage: null,
     landingPage: [{
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      description: "I am a Full Stack Developer with an emphasis on responsiveness, who wants to help companies grow through the use of innovative technologies, particularly using front-end tech like React. I'm also comfortable using back-end tech including NodeJS, Express and MongoDB.",
       button: "more about me",
+      buttonColor: "linear-gradient(to right, #0c8585, #14dfdf)",
       link: "/about"
     }],
     aboutPage: [{
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      button: "my Work",
+      button: "more about work",
+      buttonColor: "linear-gradient(to left, #F9E7A6, #F4D35E)",
+      textColor: "#F4C75E",
       link: "/work"
     }],
     workPage: [{
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      button: "my Work",
-      link: "/"
+      button: "more about me",
+      buttonColor: "linear-gradient(to right, #0c8585, #14dfdf)",
+      link: "/about"
     }]
   };
   render() {

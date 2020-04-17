@@ -10,7 +10,6 @@
         &-block {
             display: grid;
             grid-template-columns: repeat(auto-fit, 50%);
-            // grid-gap: 5%;
             grid-row-gap: inherit;
             position: relative;
 
@@ -78,8 +77,8 @@
         }
         &-block {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 33%);
-
+            grid-template-columns: repeat(auto-fit, 31%);
+            grid-gap: 3%;
             &__icon {
                 position: relative;
                 margin-bottom: 2em;
@@ -91,11 +90,11 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 15px;
+                    top: 30px;
                     left: 20px;
-                    width: 120px;
-                    height: 110px;
-                    background-color: #daf8ff;
+                    width: 100px;
+                    height: 80px;
+                    background-color: #DAF8FF;
                     z-index: -1;
                 }
                 & img {
@@ -118,7 +117,7 @@
                 text-align: center;
 
                 &-title {
-                    color: #daf8ff;
+                    color: #14dfdf;
                 }
                 &-list{
                     text-align: center;

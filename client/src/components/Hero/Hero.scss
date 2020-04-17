@@ -10,7 +10,7 @@
   &__shape {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 130;
     height: 100vh;
 
     &-filled {
@@ -62,7 +62,7 @@
   &__caption {
     margin-top: 0;
     position: fixed;
-    top: 60%;
+    top: 55%;
     transform: translateY(-50%);
   }
 
@@ -78,15 +78,12 @@
   &__typist {
     &-title {
       color: #2f2f2f;
-      font-size: 3.8rem;
+      font-size: 60px;
       line-height: 1.2;
-      white-space: nowrap;
-      width: 0;
+      font-family: Playfair-bold;
+      font-weight: 400;
+      width: 40%;
       margin: 0;
-    }
-
-    &-mark {
-      color: #81d6e3;
     }
   }
 
@@ -94,10 +91,10 @@
     max-width: 45%;
 
     &-description {
-      line-height: 32px;
+      line-height: 36px;
       font-size: 18px;
       color: #6b6b6b;
-      margin-bottom: 2em;
+      margin: 3.2em 0;
     }
 
     &-button {
@@ -106,10 +103,9 @@
       color: #0c8585;
       text-decoration: none;
       padding: 0.5em 1em;
-      border: 10px solid;
+      border: 1px solid;
       border-image-slice: 1;
-      border-width: 5px;
-      border-image-source: linear-gradient(to right, #0c8585, #14dfdf);
+      border-width: 3px;
       &::before {
         content: "";
         display: block;
@@ -135,8 +131,8 @@
         transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
       }
       &:hover {
-        border-image-source: linear-gradient(to left, #754F5B, #E6DBD0);
-        color: #5D4954;
+        border-image-source: linear-gradient(to left, #754F5B, #E6DBD0) !important;
+        color: #5D4954 !important;
         &::before {
           right: 80%;
         }

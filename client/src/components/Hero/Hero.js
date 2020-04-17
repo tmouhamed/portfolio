@@ -9,7 +9,7 @@ import './Hero.scss';
 
 class Hero extends Component {
     render() {
-        const { props, fill, stroke, path, shapeClass, outlineClass, filledViewbox, outlineViewbox, heroClass, captionClass } = this.props;
+        const { props, title, fill, stroke, path, shapeClass, outlineClass, filledViewbox, outlineViewbox, heroClass, captionClass } = this.props;
         return (
             <section className={heroClass}>
                 <div className="hero__shape">
@@ -24,13 +24,11 @@ class Hero extends Component {
                 <div className="hero__row">
                     <div className={captionClass}>
                         {props.match.url === '/' ?
+                            < Typist cursor={{ show: false }} className="hero__typist">
+                                <h1 className="hero__typist-title">Hello,<br /> My name is <span>Toqa</span></h1>
+                            </Typist> :
                             <Typist cursor={{ show: false }} className="hero__typist">
-                                <h1 className="hero__typist-title">Hello <span className="hero__ttypist-mark">!</span><br /> My name is <span>Toqa</span></h1>
-                                <h1 className="hero__typist-title">I am a Front-end Developer<Typist.Backspace count={19} delay={1000} /> Back-end Developer<Typist.Backspace count={19} delay={1000} /> Web Developer</h1>
-                            </Typist>
-                            :
-                            <Typist cursor={{ show: false }} className="hero__typist">
-                                <h1 className="hero__typist-title">About me !</h1>
+                                <h1 className="hero__typist-title">{title}</h1>
                             </Typist>
                         }
 
@@ -38,14 +36,14 @@ class Hero extends Component {
                             return (
                                 <div className="hero__subSection" key={uuidv4()}>
                                     <p className="hero__subSection-description">{info.description}</p>
-                                    <a className="hero__subSection-button" href={info.link}> {info.button}</a>
+                                    <a className="hero__subSection-button" style={{ borderImageSource: info.buttonColor, color: info.textColor }} href={info.link}> {info.button}</a>
                                 </div>
                             )
                         })}
-                        {props.match.url === '/' ? <SocialButton /> : null}
+                        {props.match.url === '/' || props.match.url === '/work'? <SocialButton /> : null}
                     </div >
                 </div>
-            </section>
+            </section >
         );
     }
 }

@@ -1,9 +1,11 @@
+@import './mixins.scss';
 
 html, body {
+    overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
+    font-family: Playfair;
     color: #2f2f2f;
-    font-family: "Playfair Display",serif;
 }
   *, *:before, *:after {
     box-sizing: inherit;
