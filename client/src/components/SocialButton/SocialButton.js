@@ -18,16 +18,17 @@ class SocialButton extends Component {
         this.myTween.timeScale(1.6);
         this.myTween
             .to('.container__cube', 0.4, { rotation: 45, width: '120px', height: '120px', ease: Expo.easeOut }, 'first')
-            .to('.container__cube-plus .container__cube-plus__horizontal', 0.3, { width: '0', backgroundColor: '#fff', ease: Power1.easeIn }, 'first')
+            .to('.container__cube-plus .container__cube-plus__vertical', 0.3, {height: '0', backgroundColor: '#14dfdf', ease: Power1.easeIn}, 'first')
+            .to('.container__cube-plus .container__cube-plus__horizontal', 0.3, {width: '0', backgroundColor: '#14dfdf', ease: Power1.easeIn}, 'first')
             .to('.container__cube', 0, { backgroundColor: 'transparent' })
-            .to('.quadrant__item1', 0.15, { x: -5, y: -5 }, 'seperate')
-            .to('.arrow-up', 0.2, { opacity: 1, y: 0 }, 'seperate+=0.2')
-            .to('.quadrant__item2', 0.15, { x: 5, y: -5 }, 'seperate')
-            .to('.arrow-right', 0.2, { opacity: 1, x: 0 }, 'seperate+=0.2')
-            .to('.quadrant__item3', 0.15, { x: 5, y: 5 }, 'seperate')
-            .to('.arrow-down', 0.2, { opacity: 1, y: 0 }, 'seperate+=0.2')
-            .to('.quadrant__item4', 0.15, { x: -5, y: 5 }, 'seperate')
-            .to('.arrow-left', 0.2, { opacity: 1, x: 0 }, 'seperate+=0.2')
+            .to('.quadrant__item1',  0.15, {x: -5, y: -5}, 'seperate')
+            .to('.arrow-up', 0.2, {opacity: 1, y: 0}, 'seperate+=0.2')
+            .to('.quadrant__item2', 0.15, {x: 5, y: -5}, 'seperate')
+            .to('.arrow-right', 0.2, {opacity: 1, x: 0}, 'seperate+=0.2')
+            .to('.quadrant__item3', 0.15, {x: 5, y: 5}, 'seperate')
+            .to('.arrow-down', 0.2, {opacity: 1, y: 0}, 'seperate+=0.2')
+            .to('.quadrant__item4', 0.15, {x: -5, y: 5}, 'seperate')
+            .to('.arrow-left', 0.2, {opacity: 1, x: 0}, 'seperate+=0.2')
             .play();
     }
 
@@ -63,15 +64,6 @@ class SocialButton extends Component {
                             </svg>
                         </div>
                     </div>
-                    <div className="container__quadrant-item quadrant__item3">
-                        <div className="container__quadrant-item__content">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="arrow-left">
-                                <a href="https://drive.google.com/file/d/15Eg0nnUtYJj8d0T6y1SHbT9enWDcoM4G/view?usp=sharing" target="_blank" rel="noopener noreferrer" cursor="pointer">
-                                    <path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z" fill="#fff" />
-                                </a>
-                            </svg>
-                        </div>
-                    </div>
                     <div className="container__quadrant-item quadrant__item4">
                         <div className="container__quadrant-item__content">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" className="arrow-down">
@@ -81,6 +73,16 @@ class SocialButton extends Component {
                             </svg>
                         </div>
                     </div>
+                    <div className="container__quadrant-item quadrant__item3">
+                        <div className="container__quadrant-item__content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="arrow-left">
+                                <a href="https://drive.google.com/file/d/15Eg0nnUtYJj8d0T6y1SHbT9enWDcoM4G/view?usp=sharing" target="_blank" rel="noopener noreferrer" cursor="pointer">
+                                    <path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z" fill="#fff" />
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div >

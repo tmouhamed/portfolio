@@ -5,7 +5,7 @@
   &__cube {
     width: 60px;
     height: 60px;
-    background: #fff;
+    background: #14dfdf;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -21,14 +21,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
-
-      height: 50%;
-      width: 5px;
     }
 
     &-plus__horizontal {
       width: 50%;
       height: 5px;
+    }
+
+    &-plus__vertical {
+      height: 50%;
+      width: 5px;
     }
   }
 
@@ -42,7 +44,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     
-
     &-item {
       width: 50%;
       height: 50%;
@@ -52,8 +53,8 @@
       background-color: #14dfdf;
       border-radius: 6px;
       position: relative;
-      color: #fff;
     }
+
     &-item__content {
       width: 100%;
       height: 100%;
@@ -68,10 +69,7 @@
   }
 }
 
-.arrow-down,
-.arrow-left,
-.arrow-right,
-.arrow-up {
+.arrow-down, .arrow-left, .arrow-right, .arrow-up {
   opacity: 0;
 }
 
