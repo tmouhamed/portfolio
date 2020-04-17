@@ -58,7 +58,7 @@
       animation-delay: 2.5s;
     }
   }
-  
+
   &__caption {
     margin-top: 0;
     position: fixed;
@@ -103,11 +103,13 @@
     &-button {
       position: relative;
       background: none;
-      color: #7d53de;
+      color: #0c8585;
       text-decoration: none;
-      border: 0.2em solid #7d53de;
       padding: 0.5em 1em;
-
+      border: 10px solid;
+      border-image-slice: 1;
+      border-width: 5px;
+      border-image-source: linear-gradient(to right, #0c8585, #14dfdf);
       &::before {
         content: "";
         display: block;
@@ -133,6 +135,8 @@
         transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
       }
       &:hover {
+        border-image-source: linear-gradient(to left, #754F5B, #E6DBD0);
+        color: #5D4954;
         &::before {
           right: 80%;
         }
@@ -147,15 +151,15 @@
 @keyframes slideIn {
   0% {
     d: path(
-        "M114.499 -0.999968L240.999 -1.00003L240.999 217.5C240.999 217.5 81.9999 310 67.499 217.5C52.9982 125 -29.0004 116 11.9998 57.5C53 -1.00005 114.499 -0.999968 114.499 -0.999968Z"
+      "M114.499 -0.999968L240.999 -1.00003L240.999 217.5C240.999 217.5 81.9999 310 67.499 217.5C52.9982 125 -29.0004 116 11.9998 57.5C53 -1.00005 114.499 -0.999968 114.499 -0.999968Z"
     );
     transform: translateX(450px);
-}
-100% {
+  }
+  100% {
     d: path(
-        "M6 -1.00002L665 -1.00006L665 861C665 861 195.93 718.511 245.775 487.68C295.619 256.85 212.917 235.324 84.8721 149.674C-30.0745 72.7857 6 -1.00002 6 -1.00002Z"
+      "M6 -1.00002L665 -1.00006L665 861C665 861 195.93 718.511 245.775 487.68C295.619 256.85 212.917 235.324 84.8721 149.674C-30.0745 72.7857 6 -1.00002 6 -1.00002Z"
     );
-}
+  }
 }
 
 @keyframes outlineBlue {
