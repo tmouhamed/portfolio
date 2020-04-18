@@ -1,23 +1,35 @@
+@import "../../style/mixins.scss";
 .main {
     position: relative;
-    margin: 250px 0;
+    margin: 200px 0;
 
     &__content {
         position: relative;
-        padding: 0 8%;
+        padding: 0 5%;
         max-width: 1440px;
 
+        @include tablet-size {
+            padding: 0 8%;
+        }
+
         &-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 50%);
+            display: block;
             grid-row-gap: inherit;
             position: relative;
+
+            @include tablet-size {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, 50%);
+            }
 
             &__left {
                 clear: left;
                 float: left;
-                display: block;
-                margin-right: 20px;
+                margin-bottom: 3em;
+
+                @include tablet-size {
+                    margin-right: 20px;
+                }
 
                 &-image {
                     position: relative;
@@ -31,6 +43,7 @@
                         display: block;
                     }
                 }
+
                 &-overlay {
                     position: absolute;
                     top: 0;
@@ -46,13 +59,18 @@
             }
 
             &__right {
-                transform: translateY(450px);
+                margin-bottom: 3em;
+                @include tablet-size {
+                    transform: translateY(450px);
+                }
 
                 &-description {
                     & p {
-                        font-size: 18px;
-                        line-height: 36px;
-                        color: #6b6b6b;
+                        @include paragraph-mobile-style;
+
+                        @include tablet-size {
+                            @include paragraph-tablet-style;
+                        }
                     }
                 }
             }
@@ -66,19 +84,36 @@
 
     &__content {
         position: relative;
-        padding: 0 8%;
+        padding: 0 5%;
+
+        @include tablet-size {
+            padding: 0 8%;
+        }
 
         &-title {
-            font-size: 60px;
-            line-height: 72px;
-            margin-bottom: 60px;
-            color: #2f2f2f;
-            font-family: "Playfair Display", serif;
+            margin-bottom: 1.9em;
+            text-align: center;
+            @include header-mobile-style;
+
+            @include tablet-size {
+                text-align: left;
+                @include header-tablet-style;
+            }
         }
+
         &-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 31%);
-            grid-gap: 3%;
+            display: block;
+
+            @include tablet-size {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, 31%);
+                grid-gap: 3%;
+            }
+
+            &__div {
+                margin-bottom: 5em;
+            }
+
             &__icon {
                 position: relative;
                 margin-bottom: 2em;
@@ -94,7 +129,7 @@
                     left: 20px;
                     width: 100px;
                     height: 80px;
-                    background-color: #DAF8FF;
+                    background-color: #daf8ff;
                     z-index: -1;
                 }
                 & img {
@@ -104,22 +139,23 @@
                 }
             }
 
-            &__title , &__text{
-                font-size: 18px;
-                line-height: 27px;
+            &__title {
                 text-align: center;
-            }
-            &__text {
-                color: #6b6b6b;
+                @include subheader-mobile-style;
             }
 
+            &__text {
+                text-align: center;
+                @include paragraph-mobile-style;
+            }
+        
             &__code {
                 text-align: center;
 
                 &-title {
                     color: #14dfdf;
                 }
-                &-list{
+                &-list {
                     text-align: center;
                     padding: 0;
                     list-style: none;
@@ -130,7 +166,6 @@
                     color: #6b6b6b;
                 }
             }
-            
         }
     }
 }

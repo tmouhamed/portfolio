@@ -1,3 +1,4 @@
+@import "../../style/mixins.scss";
 .hero {
   position: relative;
   padding-top: 250px;
@@ -6,12 +7,20 @@
     padding-top: 0;
     height: 100vh;
   }
+  
+  &__landing {
+    top: -100px !important;
+  }
 
   &__shape {
     position: absolute;
     right: 0;
-    top: 130;
-    height: 100vh;
+    top: 0;
+    height: 1080px;
+
+    @include tablet-size {
+      top: 130px;
+    }
 
     &-filled {
       max-height: 891px;
@@ -52,6 +61,7 @@
       right: 0;
       max-height: 1164px;
       width: 100%;
+      height: 100%;
       opacity: 0;
 
       animation: outlineBlue 0.5s forwards;
@@ -59,42 +69,54 @@
     }
   }
 
-  &__caption {
-    margin-top: 0;
-    position: fixed;
-    top: 55%;
-    transform: translateY(-50%);
-  }
-
   &__row {
-    padding: 0 8%;
+    padding: 0 5%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     min-width: auto;
     max-width: 1440px;
+
+    @include tablet-size {
+      padding: 0 8%;
+    }
+  }
+
+  &__caption {
+    margin-top: 0;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__typist {
     &-title {
-      color: #2f2f2f;
-      font-size: 60px;
-      line-height: 1.2;
-      font-family: Playfair-bold;
-      font-weight: 400;
-      width: 40%;
       margin: 0;
+      @include header-mobile-style;
+
+      @include tablet-size {
+        width: 40%;
+        @include header-tablet-style;
+      }
     }
   }
 
   &__subSection {
-    max-width: 45%;
+    padding-right: 6%;
+    
+    @include tablet-size {
+      max-width: 45%;
+      padding: 0;
+    }
 
     &-description {
-      line-height: 36px;
-      font-size: 18px;
-      color: #6b6b6b;
-      margin: 3.2em 0;
+      margin: 2em 0;
+      @include paragraph-mobile-style;
+
+      @include tablet-size {
+        margin: 3.2em 0;
+        @include paragraph-tablet-style
+      }
     }
 
     &-button {
@@ -131,8 +153,8 @@
         transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
       }
       &:hover {
-        border-image-source: linear-gradient(to left, #754F5B, #E6DBD0) !important;
-        color: #5D4954 !important;
+        border-image-source: linear-gradient(to left, #754f5b, #e6dbd0) !important;
+        color: #5d4954 !important;
         &::before {
           right: 80%;
         }

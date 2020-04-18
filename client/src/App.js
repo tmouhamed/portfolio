@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './style/base.scss';
 
 import LandingPage from './pages/LandingPage/LandingPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import WorkPage from './pages/WorkPage/WorkPage';
+
+
+import homeLogo from './assets/homesphereLanding.png';
+import inStock from './assets/inStock.png';
+import bandSite from './assets/bandSite.png';
+import bcmj from './assets/bcmj.png';
+import todo from './assets/todoList.png'
 
 class App extends Component {
   state = {
@@ -27,6 +34,31 @@ class App extends Component {
       button: "more about me",
       buttonColor: "linear-gradient(to right, #0c8585, #14dfdf)",
       link: "/about"
+    }],
+    projects: [{
+      name: "BCMJ",
+      description: "Lorem Ipsum is simply dummy text",
+      photo: bcmj
+    },
+    {
+      name: "Homeshphere",
+      description: "Lorem Ipsum is simply dummy text",
+      photo: homeLogo
+    },
+    {
+      name: "inStock",
+      description: "Lorem Ipsum is simply dummy text",
+      photo: inStock
+    },
+    {
+      name: "Bandsite",
+      description: "Lorem Ipsum is simply dummy text",
+      photo: bandSite
+    },
+    {
+      name: "Todo List Application",
+      description: "Coming soon",
+      photo: todo
     }]
   };
   render() {
@@ -35,9 +67,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/about" render={(props) => <AboutPage  {...props} info={this.state.aboutPage}/>}/>
-            <Route path="/work" render={(props) => <WorkPage  {...props} info={this.state.workPage}/>}/>
-            <Route exact path="/" render={(props) => <LandingPage {...props} info={this.state.landingPage}/>}/>
+            <Route path="/about" render={(props) => <AboutPage  {...props} info={this.state.aboutPage} />} />
+            <Route path="/work" render={(props) => <WorkPage  {...props} info={this.state.workPage} projects={this.state.projects} />} />
+            <Route exact path="/" render={(props) => <LandingPage {...props} info={this.state.landingPage} />} />
           </Switch>
         </BrowserRouter>
       </div>

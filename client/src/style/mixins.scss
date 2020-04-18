@@ -1,85 +1,68 @@
 //Font Typography
 @font-face {
-  font-family: Playfair;
+  font-family: playfair;
   src: url("../assets/font/PlayfairDisplay-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: Playfair-bold;
+  font-family: playfairBold;
   // font-weight:800;
-  src: url("../assets/font/static/PlayfairDisplay-Bold.ttf");
+  src: url("../assets/font/static/PlayfairDisplay-SemiBold.ttf");
 }
 @font-face {
-  font-family: Playfair-bolder;
-  src: url("../assets/font/static/PlayfairDisplay-ExtraBold.ttf");
+  font-family: playfairBolder;
+  src: url("../assets/font/static/PlayfairDisplay-Bold.ttf");
 }
 
-// //Screen Sizes
-// @mixin tablet-size {
-//   @media (min-width: 768px) {
-//     @content;
-//   }
-// }
-// @mixin desktop-size {
-//   @media (min-width: 1440px) {
-//     @content;
-//   }
-// }
+//Screen Sizes
+@mixin tablet-size {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-size {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
 
-// // Display Styles
-// @mixin flex-display-column {
-//   display: flex;
-//   flex-direction: column;
-//   height: auto;
-// }
+// Typography MOBILE Styles
+@mixin header-mobile-style {
+  font-size: 36px;
+  line-height: 45px;
+  font-family: playfairBolder;
+  color: #2f2f2f;
+}
+@mixin subheader-mobile-style {
+  font-size: 20px;
+  line-height: 22px;
+  font-family: playfairBold;
+  color: #2f2f2f;
+}
 
-// @mixin flex-display-row {
-//   display: flex;
-//   flex-direction: row;
-//   height: auto;
-// }
+@mixin paragraph-mobile-style {
+  font-size: 18px;
+  line-height: 36px;
+  font-family: playfair;
+  color: #6b6b6b;
+}
 
+// Typography TABLET Styles
+@mixin header-tablet-style {
+  font-size: 60px;
+  line-height: 72px;
+  font-family: playfairBolder;
+  color: #2f2f2f;
+}
 
-// // Typography MOBILE Styles
-// @mixin header-mobile-style {
-//   margin: 0;
-//   font-size: 24px;
-//   line-height: 32px;
-//   font-family: $bold-font;
-// }
-// @mixin subheader-mobile-style {
-//   margin: 0;
-//   font-size: 14px;
-//   line-height: 22px;
-//   font-family: $demibold-font;
-// }
+@mixin subheader-tablet-style {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: playfairBold;
+}
 
-// @mixin pargraph-mobile-style {
-//   margin: 0;
-//   font-size: 13px;
-//   line-height: 22px;
-//   font-family: $regular-font;
-// }
-
-// // Typography TABLET Styles
-// @mixin header-tablet-style {
-//   font-size: 36px;
-//   line-height: 44px;
-//   font-family: $bold-font;
-// }
-// @mixin header2-tablet-style {
-//   font-size: 24px;
-//   line-height: 32px;
-//   font-family: $bold-font;
-// }
-
-// @mixin subheader-tablet-style {
-//   font-size: 16px;
-//   line-height: 24px;
-//   font-family: $demibold-font;
-// }
-
-// @mixin pargraph-tablet-style {
-//   font-size: 14px;
-//   line-height: 22px;
-//   font-family: $regular-font;
-// }
+@mixin paragraph-tablet-style {
+  font-size: 18px;
+  line-height: 36px;
+  font-family: playfair;
+  color: #6b6b6b;
+}

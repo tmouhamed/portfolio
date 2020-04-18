@@ -9,10 +9,10 @@ import './Hero.scss';
 
 class Hero extends Component {
     render() {
-        const { props, title, fill, stroke, path, shapeClass, outlineClass, filledViewbox, outlineViewbox, heroClass, captionClass } = this.props;
+        const { props, title, fill, stroke, path, landingClass, shapeClass, outlineClass, filledViewbox, outlineViewbox, heroClass, captionClass } = this.props;
         return (
             <section className={heroClass}>
-                <div className="hero__shape">
+                <div className={landingClass}>
                     <svg className={shapeClass} viewBox={filledViewbox}>
                         {stroke ? <path fill="none" stroke={stroke} strokeWidth="2" d={path} /> : <path fill={fill} d={path} />}
                     </svg>
