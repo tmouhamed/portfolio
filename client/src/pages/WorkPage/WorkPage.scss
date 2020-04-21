@@ -1,13 +1,13 @@
 @import "../../style/mixins.scss";
 .main__content-block {
     &__col {
-        margin-bottom: 3em;
-        @include tablet-size {
+        // margin-bottom: 3em;
+        @include desktop-size {
             &:nth-child(2n + 1) {
                 margin-left: 0;
                 clear: left;
                 transform: translateY(60px);
-                margin-bottom: 7em;
+                margin-bottom: 3em;
             }
         }
     }
@@ -15,15 +15,16 @@
     &__card {
         position: relative;
         background: #fbf7de;
-        max-width: 435px;
         border-radius: 30px;
         padding: 2rem;
         overflow: hidden;
+        transform: scale(0.8);
+
+        @include desktop-size {
+            transform: scale(1);
+        }
 
         @include tablet-size {
-            max-width: 480px;
-            margin-left: 2em;
-            
             &::after {
                 content: "";
                 display: block;
@@ -58,6 +59,14 @@
             position: absolute;
             left: 0;
             top: 44%;
+
+            @include tablet-size {
+                top: 49%;
+            }
+
+            @include desktop-size {
+                top: 44%;
+            }
         }
 
         &-svgLine {
