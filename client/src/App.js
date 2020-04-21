@@ -11,6 +11,7 @@ import homeLogo from './assets/homesphereLanding.png';
 import inStock from './assets/inStock.png';
 import bandSite from './assets/bandSite.png';
 import bcmj from './assets/bcmj.png';
+import brainflex from './assets/brainflex.png'
 import todo from './assets/todoList.png'
 
 class App extends Component {
@@ -38,26 +39,41 @@ class App extends Component {
     }],
     projects: [{
       name: "BCMJ",
-      description: "Lorem Ipsum is simply dummy text",
-      photo: bcmj
+      description: "An online medical journal that includes mySQL saved medical articles, and classifieds posting platform with a payment system for the users. ",
+      usedLang: ["HTML", "CSS", "PHP", "Drupal", "MySQL"],
+      photo: bcmj,
+      link: "https://www.bcmj.org/"
     },
     {
       name: "Homeshphere",
-      description: "Lorem Ipsum is simply dummy text",
+      description: "A platform that connect real state agents with renters. It allows agents to post their properties and handle all rental viewings and applications with minimum effort.",
+      usedLang: ["HTML", "CSS3", "React.js", "Express.js"],
       photo: homeLogo
     },
     {
       name: "inStock",
-      description: "Lorem Ipsum is simply dummy text",
-      photo: inStock
+      description: "Collaborative programming project utilizing Jira software to coordinate project tickets in an agile environment. Web application allowing users to find, add, or remove warehouse and inventory data.",
+      usedLang: ["CSS3", "React.js", "Express.js" ],
+      photo: inStock,
+      link: "https://github.com/Ivan1023/instock-roy-6"
     },
     {
       name: "Bandsite",
-      description: "Lorem Ipsum is simply dummy text",
-      photo: bandSite
+      description: "A multi-page website which allows users to post comments and view upcoming band show date information in a table format. Information was generated from a RESTful API using axios and comments were posted via JavaScript and axios.",
+      usedLang: [" HTML5", "CSS3" , "Javascript"],
+      photo: bandSite,
+      link: "https://github.com/tmouhamed/toqa-mouhamed-bansdite/tree/master/sprint-3"
+    },
+    {
+      name: "Brainflex",
+      description: "A video streaming platform where users can upload their videos with descriptions. Axios was used to post videos and content as well as to populate data from the RESTful API, which was built using Node and Express.js on the server side.",
+      usedLang: ["HTML", "CSS3", "React.js", "Express.js"],
+      photo: brainflex,
+      link: "https://github.com/tmouhamed/toqa-mouhamed-brainflix/tree/master/sprint3"
     },
     {
       name: "Todo List Application",
+      usedLang: ["HTML", "CSS3", "React.js", "Express.js"],
       description: "Coming soon",
       photo: todo
     }]

@@ -1,4 +1,5 @@
 @import "../../style/mixins.scss";
+
 .main__content-block {
     &__col {
         // margin-bottom: 3em;
@@ -58,14 +59,14 @@
         &-svg {
             position: absolute;
             left: 0;
-            top: 44%;
+            top: 23%;
 
             @include tablet-size {
-                top: 49%;
+                top: 38%;
             }
 
             @include desktop-size {
-                top: 44%;
+                top: 47%;
             }
         }
 
@@ -75,27 +76,46 @@
         }
 
         &-content {
-            margin-top: -1rem;
-            opacity: 0;
             animation: ContentFadeIn 0.8s 1.6s forwards;
 
             &__title {
+                @include header-mobile-style;
                 font-family: "Playfair Display", serif;
                 color: #2f2f2f;
                 font-size: 28px;
                 line-height: 33px;
                 max-width: 70%;
-                margin: 0;
+                margin-top: 15px;
                 transform: scale(1);
             }
             &__paragraph {
                 margin-top: 1em;
                 margin-bottom: 3em;
+                @include paragraph-mobile-style;
+                font-size: 16px;
+
+                @include desktop-size {
+                    @include paragraph-tablet-style;
+                }
+            }
+        }
+
+        &-subContent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-link {
+            text-decoration: none;
+
+            & img {
+                max-width: 14px;
+                max-height: auto;
             }
         }
 
         &-list {
-            margin-top: 18px;
             display: block;
             font-size: 12px;
             text-transform: uppercase;
@@ -132,6 +152,7 @@
             height: 100%;
             transform: translate(11%);
         }
+
         &-outline {
             position: absolute;
             z-index: -1;
