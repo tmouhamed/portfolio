@@ -9,7 +9,11 @@
   }
   
   &__landing {
-    top: -100px !important;
+    top: -200px !important;
+
+    @include tablet-size {
+      top: -100px !important;
+    }
   }
 
   &__shape {
@@ -94,7 +98,7 @@
       margin: 0;
       @include header-mobile-style;
 
-      @include tablet-size {
+      @include desktop-size {
         width: 40%;
         @include header-tablet-style;
       }
@@ -102,9 +106,8 @@
   }
 
   &__subSection {
-    padding-right: 6%;
     
-    @include tablet-size {
+    @include desktop-size {
       max-width: 45%;
       padding: 0;
     }
@@ -113,7 +116,7 @@
       margin: 2em 0;
       @include paragraph-mobile-style;
 
-      @include tablet-size {
+      @include desktop-size {
         margin: 3.2em 0;
         @include paragraph-tablet-style
       }
@@ -125,9 +128,7 @@
       color: #0c8585;
       text-decoration: none;
       padding: 0.5em 1em;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-width: 3px;
+      border: 3px solid ;
       &::before {
         content: "";
         display: block;
@@ -153,7 +154,7 @@
         transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
       }
       &:hover {
-        border-image-source: linear-gradient(to left, #754f5b, #e6dbd0) !important;
+        border-color:  #754f5b !important;
         color: #5d4954 !important;
         &::before {
           right: 80%;

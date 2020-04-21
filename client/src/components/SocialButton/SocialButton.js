@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Power1, Expo, TimelineLite } from "gsap";
+import { Power1, Expo, TimelineLite , CSSPlugin} from "gsap/all";
 import './SocialButton.scss';
 
 class SocialButton extends Component {
@@ -9,6 +9,7 @@ class SocialButton extends Component {
         // reference to the DOM node
         this.myElement = null;
         // reference to the animation
+        const plugins = [CSSPlugin];
         this.myTween = new TimelineLite({ paused: true });
     }
 

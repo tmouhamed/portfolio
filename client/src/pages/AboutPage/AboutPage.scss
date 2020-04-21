@@ -1,14 +1,18 @@
 @import "../../style/mixins.scss";
 .main {
     position: relative;
-    margin: 200px 0;
+    margin: 120px 0;
+
+    @include desktop-size {
+        margin: 200px 0;
+    }
 
     &__content {
         position: relative;
         padding: 0 5%;
         max-width: 1440px;
 
-        @include tablet-size {
+        @include desktop-size {
             padding: 0 8%;
         }
 
@@ -17,17 +21,17 @@
             grid-row-gap: inherit;
             position: relative;
 
-            @include tablet-size {
+            @include desktop-size {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, 50%);
             }
 
             &__left {
-                clear: left;
-                float: left;
                 margin-bottom: 3em;
-
-                @include tablet-size {
+                @include desktop-size {
+                    clear: left;
+                    float: left;
+                    margin-bottom: 3em;
                     margin-right: 20px;
                 }
 
@@ -60,15 +64,16 @@
 
             &__right {
                 margin-bottom: 3em;
-                @include tablet-size {
-                    transform: translateY(450px);
+
+                @include desktop-size {
+                    transform: translateY(350px);
                 }
 
                 &-description {
                     & p {
                         @include paragraph-mobile-style;
 
-                        @include tablet-size {
+                        @include desktop-size {
                             @include paragraph-tablet-style;
                         }
                     }
@@ -80,13 +85,17 @@
 
 .side {
     position: relative;
-    margin: 200px 0;
+    margin: 100px 0;
+
+    @include desktop-size {
+        margin: 200px 0;
+    }
 
     &__content {
         position: relative;
         padding: 0 5%;
 
-        @include tablet-size {
+        @include desktop-size {
             padding: 0 8%;
         }
 
@@ -95,7 +104,7 @@
             text-align: center;
             @include header-mobile-style;
 
-            @include tablet-size {
+            @include desktop-size {
                 text-align: left;
                 @include header-tablet-style;
             }
@@ -104,7 +113,7 @@
         &-block {
             display: block;
 
-            @include tablet-size {
+            @include desktop-size {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, 31%);
                 grid-gap: 3%;
@@ -148,7 +157,7 @@
                 text-align: center;
                 @include paragraph-mobile-style;
             }
-        
+
             &__code {
                 text-align: center;
 

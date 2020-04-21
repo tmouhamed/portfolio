@@ -36,7 +36,7 @@ class Hero extends Component {
                             return (
                                 <div className="hero__subSection" key={uuidv4()}>
                                     <p className="hero__subSection-description">{info.description}</p>
-                                    <a className="hero__subSection-button" style={{ borderImageSource: info.buttonColor, color: info.textColor }} href={info.link}> {info.button}</a>
+                                    <a className="hero__subSection-button" style={{ borderColor: info.buttonColor, color: info.textColor }} href={info.link}> {info.button}</a>
                                 </div>
                             )
                         })}

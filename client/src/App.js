@@ -19,20 +19,21 @@ class App extends Component {
     landingPage: [{
       description: "I am a Full Stack Developer with an emphasis on responsiveness, who wants to help companies grow through the use of innovative technologies, particularly using front-end tech like React. I'm also comfortable using back-end tech including NodeJS, Express and MongoDB.",
       button: "more about me",
-      buttonColor: "linear-gradient(to right, #0c8585, #14dfdf)",
+      buttonColor: "#14dfdf",
       link: "/about"
     }],
     aboutPage: [{
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      description: "I'm a young web developer with a CS degree, a web development diploma, 2 years of experience, and a constant will to learn and improve.",
+      photoDescription: "I hold a Computer Science degree from Ain Shams Univeristy, Egypt. After that, I moved to Vancouver. Since then I had worked as a web developer in Ajyal Islamic Center, LatinCouver, then Doctors of BC. After that I had my first daughter, moved to Toronto, and finished a web development diploma from BrainStation. Right now, I'm in the market for a web development position in Toronto. I enjoy being a web developer, I like the diversity of technologies and languages if offers. I like to explore and always have a hunger for learning new things. I'm also a dedicated problem solver, and will stop at nothing until I finish my tasks. I work well alone, I am also a good team player, although I prefer to work in teams.",
       button: "more about work",
-      buttonColor: "linear-gradient(to left, #F9E7A6, #F4D35E)",
+      buttonColor: "#F9E7A6",
       textColor: "#F4C75E",
       link: "/work"
     }],
     workPage: [{
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      description: "I work to create dev-friendly reusable components that can scale effectively and be applied to any future work. And this is a selection of websites I have built during my time at Doctors of BC, BrainStation, and individual projects I've recently worked on.",
       button: "more about me",
-      buttonColor: "linear-gradient(to right, #0c8585, #14dfdf)",
+      buttonColor: "#14dfdf",
       link: "/about"
     }],
     projects: [{
