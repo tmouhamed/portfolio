@@ -65,13 +65,8 @@
       top: 0;
       right: 0;
       max-height: 1164px;
-      width: 100%;
       height: 100%;
       opacity: 0;
-
-      @include tablet-size {
-        right: -40px;
-      }
 
       animation: outlineBlue 0.5s forwards;
       animation-delay: 2.5s;

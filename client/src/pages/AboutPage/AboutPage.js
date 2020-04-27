@@ -33,6 +33,7 @@ class AboutPage extends Component {
             </div>
           </div>
         </section>
+        
         <section className="side">
           <div className="side__content">
             <h2 className="side__content-title">Skills</h2>
